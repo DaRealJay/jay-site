@@ -1,24 +1,21 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { site } from "@/lib/site";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Jay – Modern Web Design",
-    template: "%s – Jay",
-  },
-  description: "Fast, clean websites that convert. SEO + performance baked in.",
-  metadataBase: new URL("https://example.com"), // ← change after deploy
+  title: { default: site.seo.title, template: `%s – ${site.brand}` },
+  description: site.seo.description,
+  metadataBase: new URL("https://jay-site-nine.vercel.app"),
   openGraph: {
-    title: "Jay – Modern Web Design",
-    description: "Fast, clean websites that convert. SEO + performance baked in.",
-    url: "https://example.com",                 // ← change after deploy
-    siteName: "Jay",
-    // Using /next.svg so you don't need to add an image yet (swap to /og-image.png later)
-    images: ["/next.svg"],
+    title: site.seo.title,
+    description: site.seo.description,
+    url: "https://jay-site-nine.vercel.app",
+    siteName: site.brand,
+    images: [site.seo.ogImage],
     type: "website",
   },
   robots: { index: true, follow: true },
