@@ -1,7 +1,7 @@
 // lib/site.ts
 export const site = {
-  brand: "Webflix",
-  url: "jay-site-nine.vercel.app", // after deploy: "https://YOUR-LIVE-DOMAIN"
+  brand: "Webflix2",
+  url: "https://jay-site-nine.vercel.app", // after deploy: "https://YOUR-LIVE-DOMAIN"
 
   seo: {
     title: "Jay – Modern Web Design",
